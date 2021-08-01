@@ -16,6 +16,17 @@ git clone git@github.com:cdxpro/investment-pool-svyryd-volodymyr.git
 npm install
 ```
 
+### Install dependencies
+```bash
+npm install
+```
+
+### Copy config file and place your environment variables to .env file
+
+```bash
+cp .env.example .env
+```
+
 ### Building and deploy contract
 
 ```bash
