@@ -1,0 +1,28 @@
+{
+  "name": "investment-pool",
+  "version": "1.0.0",
+  "description": "A implementation of the Investment pool on Ethereum",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cdxpro/investment_pool_svyryd_volodymyr.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cdxpro/investment_pool_svyryd_volodymyr/issues"
+  },
+  "homepage": "https://github.com/cdxpro/investment_pool_svyryd_volodymyr#readme",
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.2.0",
+    "@truffle/hdwallet-provider": "^1.4.2",
+    "dotenv": "^10.0.0",
+    "solidity-coverage": "^0.7.16",
+    "truffle-plugin-verify": "^0.5.11"
+  }
+}
