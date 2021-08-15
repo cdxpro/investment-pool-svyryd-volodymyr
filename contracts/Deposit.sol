@@ -2,7 +2,7 @@
 pragma solidity 0.8.0;
 
 import '@openzeppelin/contracts/access/Ownable.sol';
-import './FinPool.sol';
+import '@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol';
 
 contract Deposit is Ownable {
     using SafeERC20 for IERC20;
@@ -72,7 +72,7 @@ contract Deposit is Ownable {
 
     function depositToken(IERC20 _tokenAddress, uint256 _amount) external payable {
         require(tokensSettings[_tokenAddress].isDepositAllowed, 'deposit for this token is not allowed.');
-
+        
         address from = msg.sender;
         address to = address(this);
 
@@ -90,7 +90,9 @@ contract Deposit is Ownable {
         _tokenAddress.safeTransfer(msg.sender, _amount);
 
         emit TokenWithdrawn(msg.sender, _tokenAddress, _amount);
+
     }
+
 
     event TokenDeposited(address account, IERC20 token, uint256 depositedAmount);
     event TokenWithdrawn(address account, IERC20 token, uint256 withdrawnAmount);
